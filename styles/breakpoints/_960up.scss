@@ -1,0 +1,19 @@
+html {
+    font-size: 75%;
+}
+
+.header {
+    padding: 1.5rem 9%;
+
+    &__nav {
+        display: block;
+    }
+}
+
+.mobile-menu {
+
+    &__btn {
+        display: none;
+    }
+
+}
