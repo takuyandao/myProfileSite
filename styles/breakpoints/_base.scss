@@ -22,15 +22,28 @@ html {
     }
 }
 
+#container {
+    background-color: $cCloud;
+    transition: transform 0.5s;
+    position: relative;
+    z-index: 0;
+}
+
 .header {
     position: fixed;
     top: 0; left: 0; right: 0; 
     padding: 1.5rem 2rem;
-    z-index: 100;
-    background-color: $cSky;
+    z-index: 10;
+    background-color: #1998e4ed;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    opacity: 0;
+    transition: all 0.7s;
+
+    &.active {
+        opacity: 1;
+    }
 
     &__nav {
         display: none;
@@ -49,5 +62,49 @@ html {
             font-size: 2rem;
             margin: 0 1rem;
         }
+    }
+}
+
+.hero {
+    height: 100vh;
+    overflow: hidden;
+    background-image: url(../../images/hero-bg.jpeg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 0;
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 10rem;
+        background: linear-gradient(transparent, $cCloud);
+        z-index: 30;
+    }
+
+    & > h1 {
+        color: $cCloud;
+        width: 100%;
+        font-size: 6rem;
+        text-align: center;
+        position: absolute;
+        z-index: 10;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-shadow: 7px 7px 7px #262523;
+    }
+
+    & > img {
+        position: absolute;
+        object-fit: cover;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 52vh;
+        z-index: 20;
     }
 }

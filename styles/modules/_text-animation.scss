@@ -1,0 +1,40 @@
+.animate-title {
+	opacity: 0;
+
+	& > span {
+		display: inline-block;
+		opacity: 0;
+	}
+
+	&.inview {
+		opacity: 1;
+
+		& > span {
+			opacity: 1;
+
+			@include animation(
+				$name: kf-cloud-up, 
+				$duration: 1s,
+				$timing-function: cubic-bezier(0.32, 0.98, 0.88, 0.15),
+				$fill-mode: both
+			);
+
+			@for $i from 1 through 27 {
+				&:nth-child(#{$i}) {
+					animation-delay: $i * 0.03s;
+				}
+			}
+		}
+	}
+}
+
+@keyframes kf-cloud-up {
+	0% {
+		opacity: 0;
+		transform: translateY(100%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(-120%);
+	}
+}
