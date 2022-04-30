@@ -1,0 +1,33 @@
+html {
+    font-size: 93.75%;
+}
+
+.hero {
+    & > h1 {
+        font-size: 4.9rem;
+    }
+}
+
+.about {
+
+    &__ul {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 3rem;
+    }
+
+    &__li {
+        padding-bottom: 1rem;
+    }
+}
+
+@keyframes kf-cloud-up {
+	0% {
+		opacity: 0;
+		transform: translateY(100%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(-8rem);
+	}
+}

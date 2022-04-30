@@ -1,0 +1,47 @@
+$ColorIcons: (
+    "html": rgb(235, 129, 0),
+    "css": rgb(0, 106, 255),
+    "js": #f3e500,
+    "php": #7b6c9c,
+    "aws": #ffa500,
+    "docker": rgb(0, 157, 255)
+);
+
+@each $key, $value in $ColorIcons {
+    .#{$key} {
+        color: $value;
+    }
+}
+
+$Width: (
+    "width-70": 70%,
+    "width-50": 50%,
+    "width-30": 30%
+);
+
+@each $key, $value in $Width {
+    .#{$key} {
+        &::before {
+            width: $value;
+        }
+    }
+}
+
+$pattern: (
+    "left": translate(-100px, -100px),
+    "right": translate(100px, -100px)
+);
+
+@each $key, $value in $pattern {
+    .#{$key} {
+        transform: $value;
+        opacity: 0;
+        transition: transform 1s cubic-bezier(0.92, 0.01, 0.34, 0.81),
+                    opacity 1s;
+
+        &.inview {
+            transform: none;
+            opacity: 1;
+        }
+    }
+}

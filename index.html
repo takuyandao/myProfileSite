@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
     <div id="global-container">
+
         <div id="container">
             <div class="mobile-menu__cover"></div>
             <header class="header">
@@ -26,27 +29,120 @@
                 <nav class="header__nav">
                     <ul class="header__ul">
                         <li class="header__li">
-                            <a href="#">Home</a>
+                            <a href="#hero">Home</a>
                         </li>
                         <li class="header__li">
-                            <a href="#">About</a>
+                            <a href="#about">About</a>
                         </li>
                         <li class="header__li">
-                            <a href="#">Portfolio</a>
+                            <a href="#portfolio">Portfolio</a>
                         </li>
                     </ul>
                 </nav>
             </header>
             <div id="content">
-                <div class="hero">
-                    <h1 class="hero__title animate-title inview">Welcome To My Profile Site!</h1>
+                <div id="hero" class="hero">
+                    <h1 class="hero__title title-up">Welcome To My Profile Site!</h1>
                     <img src="images/cloud.png">
+                </div>
+                <div id="main-content">
+                    <section id="about" class="about">
+                
+                        <h1 class="main-title title-down">about me</h1>
+                        <div class="about__main">
+                            <div class="about__my-info">
+                                <h3 class="sub-title">presonal info</h3>
+                                <div class="about__texts">
+                                    <ul class="about__ul">
+                                        <div class="about__list-box">
+                                            <li class="about__li">
+                                                <span>full name</span>
+                                                <i class="fa-solid fa-cloud left"></i>
+                                                <span>松本卓也</span>
+                                            </li>
+                                            <li class="about__li">
+                                                <span>age</span>
+                                                <i class="fa-solid fa-cloud left"></i>
+                                                <span>27歳</span>
+                                            </li>
+                                        </div>
+                                        <div class="about__list-box">
+                                            <li class="about__li">
+                                                <span>address</span>
+                                                <i class="fa-solid fa-cloud right"></i>
+                                                <span>茨城県守谷市</span>
+                                            </li>
+                                            <li class="about__li">
+                                                <span>phone</span>
+                                                <i class="fa-solid fa-cloud right"></i>
+                                                <span>+080-3290-0862</span>
+                                            </li>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="about__my-skills">
+                                <h3 class="sub-title">my skills</h3>
+                                <div class="about__inner">
+                                    <div class="about__item">
+                                        <i class="html fa-brands fa-html5"></i>
+                                        <span>HTML</span>
+                                    </div>
+                                    <span>70%</span>
+                                </div>
+                                <div class="about__bar width-70"></div>
+                                <div class="about__inner">
+                                    <div class="about__item">
+                                        <i class="css fa-brands fa-css3-alt"></i>
+                                        <span>CSS</span>
+                                    </div>
+                                    <span>70%</span>
+                                </div>
+                                <div class="about__bar width-70"></div>
+                                <div class="about__inner">
+                                    <div class="about__item">
+                                        <i class="js fa-brands fa-js"></i>
+                                        <span>JavaScript</span>
+                                    </div>
+                                    <span>70%</span>
+                                </div>
+                                <div class="about__bar width-70"></div>
+                                <div class="about__inner">
+                                    <div class="about__item">
+                                        <i class="php fa-brands fa-php"></i>
+                                        <span>PHP</span>
+                                    </div>
+                                    <span>50%</span>
+                                </div>
+                                <div class="about__bar width-50"></div>
+                                <div class="about__inner">
+                                    <div class="about__item">
+                                        <i class="aws fa-brands fa-aws"></i>
+                                        <span>AWS</span>
+                                    </div>
+                                    <span>30%</span>
+                                </div>
+                                <div class="about__bar width-30"></div>
+                                <div class="about__inner">
+                                    <div class="about__item">
+                                        <i class="docker fa-brands fa-docker"></i>
+                                        <span>Docker</span>
+                                    </div>
+                                    <span>30%</span>
+                                </div>
+                                <div class="about__bar width-30"></div>
+                            </div>
+                        </div>
+                    </section>
+
                 </div>
             </div>
         </div>
         <div class="mobile-menu"></div>
     </div>
+    <script src="scripts/libs/scroll.js"></script>
     <script src="scripts/libs/text-animation.js"></script>
     <script src="scripts/main.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,17 @@
+html {
+    font-size: 156.25%;
+}
+
+.header {
+    padding: 0.7rem 2.5rem
+}
+
+.hero {
+    & > h1 {
+        font-size: 3.8rem;
+    }
+
+    &::before {
+        bottom: -20px;
+    }
+}

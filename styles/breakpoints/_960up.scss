@@ -1,12 +1,39 @@
 html {
-    font-size: 75%;
+    font-size: 125%;
 }
 
 .header {
-    padding: 1.5rem 9%;
-
     &__nav {
         display: block;
+    }
+}
+
+.hero {
+    & > h1 {
+        font-size: 3.6rem;
+    }
+}
+
+.about {
+    &__main {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 3rem;
+    }
+
+    &__my-skills {
+        flex-grow: 1;
+    }
+
+    &__ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    &__li {
+        padding-top: 0;
+        padding-bottom: 5.7rem;
     }
 }
 
@@ -16,4 +43,15 @@ html {
         display: none;
     }
 
+}
+
+@keyframes kf-cloud-up {
+	0% {
+		opacity: 0;
+		transform: translateY(60%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(-4rem);
+	}
 }
