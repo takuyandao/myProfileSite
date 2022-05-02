@@ -15,7 +15,7 @@ class ScrollEvent {
                 this.header.classList.add('active');
             } else {
                 this.header.classList.remove('active');
-            };
+            };   
         }
 
         onscroll = fn;

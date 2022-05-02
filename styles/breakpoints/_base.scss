@@ -8,6 +8,11 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $cMobileBgColor;
 }
 
 .main-title {
@@ -34,6 +39,7 @@ html {
 }
 
 .logo {
+    display: inline-block;
     font-size: 2rem;
 
     &  > span {
@@ -45,10 +51,16 @@ html {
     }
 }
 
-#container {
-    transition: transform 0.5s;
+#global-container {
     position: relative;
     z-index: 0;
+}
+
+#container {
+    transition: transform .5s,
+                box-shadow .5s;
+    position: relative;
+    z-index: 10;
     background-color: $cBgColor;
 }
 
@@ -62,10 +74,12 @@ html {
     justify-content: space-between;
     align-items: center;
     opacity: 0;
+    visibility: hidden;
     transition: all 0.7s;
 
     &.active {
         opacity: 1;
+        visibility: visible;
     }
 
     &__nav {

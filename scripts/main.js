@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     new ScrollEvent();
 
+    new MobileMenu();
+
     // hero title
     const fn = (el) => {
         const obj = new TextAnimation(el);
@@ -30,14 +32,3 @@ document.addEventListener('DOMContentLoaded', () => {
     new ScrollObserver('.about__bar', fn4);
 
 });
-
-const btn = document.querySelector('.mobile-menu__btn');
-const container = document.querySelector('#global-container');
-const cover = document.querySelector('.mobile-menu__cover');
-
-btn.addEventListener('click', () => {
-    container.classList.toggle('menu-open');
-});
-cover.addEventListener('click', () => {
-    container.classList.toggle('menu-open');
-})
