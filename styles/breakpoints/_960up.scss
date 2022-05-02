@@ -2,9 +2,28 @@ html {
     font-size: 125%;
 }
 
+.career-cloud {
+    font-size: 2rem;
+    color: $cSky;
+    position: absolute;
+    left: -25px;
+}
+
+.logo {
+    font-size: 1.7rem;
+}
+
 .header {
+    padding: .8rem 2.5rem;
+
     &__nav {
         display: block;
+    }
+
+    &__li {
+        & > a {
+            font-size: 1.3rem;
+        }
     }
 }
 
@@ -33,7 +52,7 @@ html {
 
     &__li {
         padding-top: 0;
-        padding-bottom: 5.7rem;
+        padding-bottom: 5.2rem;
     }
 }
 
@@ -55,3 +74,9 @@ html {
 		transform: translateY(-4rem);
 	}
 }
+
+// .career {
+//     &__top-cloud {
+//         top: -4px;
+//     }
+// }

@@ -17,19 +17,24 @@ html {
     text-align: center;
     color: $cSky;
     text-shadow: 0 0.3rem 0.5rem;
-    margin: 3.5rem 0;
+    margin: 8rem 0 2.5rem 0;
 }
 
 .sub-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-transform: capitalize;
     color: $cSun;
-    padding: 2.5rem 0;
-    letter-spacing: 3px;
+}
+
+.career-cloud {
+    font-size: 2rem;
+    color: $cSky;
+    position: absolute;
+    left: -13px;
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 2rem;
 
     &  > span {
         color: $cCloud;
@@ -50,7 +55,7 @@ html {
 .header {
     position: fixed;
     top: 0; left: 0; right: 0;
-    padding: 1rem 2.5rem;
+    padding: 1.3rem 2.5rem;
     z-index: 10;
     background-color: #1998e4c2;
     display: flex;
@@ -130,6 +135,10 @@ html {
 .about {
     padding: 2rem 2rem;
 
+    & h3 {
+        padding: 2.5rem 0;
+    }
+
     &__li {
         list-style: none;
         padding: 0.5rem 0;
@@ -204,6 +213,53 @@ html {
             color: $cFont;
             font-size: 1.3rem;
             padding-left: 0.5rem;
+        }
+    }
+}
+
+.career {
+    padding: 2rem 2rem;
+
+    & > h1 {
+        padding-bottom: 3.5rem;
+    }
+
+    & h3 {
+        padding: 0.7rem 0;
+    }
+
+    &__inner {
+        background-color: $cWhite;
+        border-radius: 50px;
+        padding: 2.5rem;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    }
+
+    &__left-border {
+        border-left: 0.2rem solid $cSky;
+        position: relative;
+    }
+
+    &__top-cloud {
+        @extend .career-cloud;
+        top: -0.2rem;
+    }
+
+    &__cloud {
+        @extend .career-cloud;
+    }
+
+    &__texts {
+        padding: 0 0 5rem 3rem;
+
+        & > span {
+            font-size: 1.3rem;
+            color: $cFont;
+        }
+
+        & > p {
+            color: #565656;
+            font-size: 1.3rem;
         }
     }
 }

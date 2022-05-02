@@ -2,6 +2,13 @@ html {
     font-size: 93.75%;
 }
 
+.career-cloud {
+    font-size: 2rem;
+    color: $cSky;
+    position: absolute;
+    left: -19px;
+}
+
 .hero {
     & > h1 {
         font-size: 4.9rem;
@@ -21,7 +28,7 @@ html {
     }
 }
 
-@keyframes kf-cloud-up {
+@keyframes kf-cloud-up { // ???
 	0% {
 		opacity: 0;
 		transform: translateY(100%);

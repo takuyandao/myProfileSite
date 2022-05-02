@@ -11,7 +11,7 @@
             height: 0.15rem;
             // width: 25px;
             // height: 1.5px;
-            margin-bottom: 0.7rem;
+            margin-bottom: 0.6rem;
             transition: all .3s ease-in-out;
 
             &:nth-child(3) {
@@ -45,14 +45,14 @@
                 background-color: $cSun;
 
                 &:nth-child(1) {
-                    transform: translateY(0.85rem) rotate(315deg);
+                    transform: translateY(0.75rem) rotate(315deg);
                     transition-delay: .1s;
                 }
                 &:nth-child(2) {
                     transform: translateX(-13px) scale(0);
                 }
                 &:nth-child(3) {
-                    transform: translateY(-0.85rem) rotate(45deg);
+                    transform: translateY(-0.75rem) rotate(45deg);
                     transition-delay: .25s;
                 }
             }

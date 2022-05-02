@@ -1,26 +1,27 @@
-document.addEventListener('DOMContentLoaded', () => { 
+document.addEventListener('DOMContentLoaded', () => {
 
     new ScrollEvent();
 
     // hero title
     const fn = (el) => {
-        const obj = new TextAnimation('.title-up');
+        const obj = new TextAnimation(el);
         obj.animate();
     }
-    new ScrollObserver('.hero__title', fn);
+    new ScrollObserver('.title-up', fn);
 
-    // about title
+    // about h1, career h1 
     const fn2 = (el) => {
-        const obj2 = new TextAnimation('.title-down');
+        const obj2 = new TextAnimation(el);
         obj2.animate();
     }
+
     new ScrollObserver('.title-down', fn2);
 
     // cloud icon
     const fn3 = (el) => {
-        el.classList.add('inview');
+        el.classList.toggle('inview');
     }
-    new ScrollObserver('.fa-cloud', fn3, { rootMargin: "0px 0px -100px 30px" });
+    new ScrollObserver('.fa-cloud', fn3, { rootMargin: "0px 0px -100px 45px" });
     
     // about bar
     const fn4 = (el) => {
