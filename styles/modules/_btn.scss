@@ -1,0 +1,27 @@
+.btn-cloud {
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    color: $cCloud;
+    background-color: $cSky;
+    border: none;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+
+    @include p-base() {
+        background-color: white;
+        clip-path: circle(30.1% at 100% 0);
+        transition: .3s linear;
+        z-index: -10;
+    }
+
+    &:hover {
+        color: deepskyblue;
+
+        &::before {
+            clip-path: circle(100%);
+        }
+    }
+}

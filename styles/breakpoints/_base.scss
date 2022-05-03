@@ -16,19 +16,29 @@ body {
 }
 
 .main-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-transform: uppercase;
     letter-spacing: 3px;
     text-align: center;
     color: $cSky;
     text-shadow: 0 0.3rem 0.5rem;
-    margin: 8rem 0 2.5rem 0;
+    padding-bottom: 2rem;
 }
 
 .sub-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-transform: capitalize;
     color: $cSun;
+}
+
+.default-text {
+    color: $cFont;
+    font-size: 1.2rem;
+}
+
+.content-width {
+    padding: 2rem 2rem;
+    // max-width: 1070px;
 }
 
 .career-cloud {
@@ -150,10 +160,14 @@ body {
 }
 
 .about {
-    padding: 2rem 2rem;
+    @extend .content-width;
 
     & h3 {
-        padding: 2.5rem 0;
+        padding-bottom: 2.5rem;
+    }
+
+    &__ul {
+        padding-bottom: 20px;
     }
 
     &__li {
@@ -161,9 +175,8 @@ body {
         padding: 0.5rem 0;
         
         & > span {
-            color: $cFont;
+            @extend .default-text;
             text-transform: capitalize;
-            font-size: 1.3rem;
         }
 
         & > i {
@@ -185,15 +198,13 @@ body {
         align-items: center;
 
         & > span {
-            font-size: 1.3rem;
-            color: $cFont;
-            display: block;
+            @extend .default-text;
         }
     }
 
     &__bar {
         width: 100%;
-        height: 2rem;
+        height: 1.5rem;
         border: .1rem solid $cFont;
         border-radius: 50px;
         position: relative;
@@ -227,15 +238,14 @@ body {
         }
 
         & > span {
-            color: $cFont;
-            font-size: 1.3rem;
+            @extend .default-text;
             padding-left: 0.5rem;
         }
     }
 }
 
 .career {
-    padding: 2rem 2rem;
+    @extend .content-width;
 
     & > h1 {
         padding-bottom: 3.5rem;
@@ -270,13 +280,85 @@ body {
         padding: 0 0 5rem 3rem;
 
         & > span {
-            font-size: 1.3rem;
-            color: $cFont;
+            @extend .default-text;
         }
 
         & > p {
-            color: #565656;
-            font-size: 1.3rem;
+            @extend .default-text;
         }
+    }
+}
+
+.portfolio {
+    @extend .content-width;
+
+    & > h1 {
+        padding-bottom: 3.5rem
+    }
+
+    & > h3 {
+        padding-bottom: 2.5rem;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        overflow: hidden;
+    }
+
+    &__img {
+        overflow: hidden;
+        flex: 3 1 40%;
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: transform 1s, opacity 1s;
+        position: relative;
+        z-index: 0;
+
+        @include p-base($which: after){
+            transition: box-shadow 1s 0.5s;
+            pointer-events: none;
+        }
+        
+        & > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: all 0.3s;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+
+        &.inview {
+            opacity: 1;
+            transform: none;
+
+            &::after {
+                box-shadow: inset 0px 0px 20px 5px $cCloud;
+            }
+            
+        }
+    }
+
+    &__item {
+        flex: 0 1 40%;
+        opacity: 0;
+        transform: translateX(100%);
+        transition: all 1s;
+
+        &.inview {
+            opacity: 1;
+            transform: none;
+        }
+    }
+
+    &__texts {
+        @extend .default-text;
+        margin-bottom: 2rem;
     }
 }
