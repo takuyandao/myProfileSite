@@ -23,8 +23,8 @@
 		& > span {
 			@include animation(
 				$name: kf-cloud-up,
-				$duration: 1s,
-				$timing-function: cubic-bezier(0.32, 0.98, 0.88, 0.15),
+				$duration: 1.5s,
+				$timing-function: cubic-bezier(0, 1.02, 0.99, -0.03),
 				$fill-mode: both
 			);
 
