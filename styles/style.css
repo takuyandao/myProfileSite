@@ -648,7 +648,7 @@ html {
 }
 
 html::-webkit-scrollbar {
-  width: 1rem;
+  width: .7rem;
 }
 
 html::-webkit-scrollbar-track {
@@ -660,7 +660,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-  background-color: #177ebc;
+  background-color: #000000;
 }
 
 .main-title {
@@ -711,6 +711,7 @@ body {
 #global-container {
   position: relative;
   z-index: 0;
+  background-color: #177ebc;
 }
 
 #container {
