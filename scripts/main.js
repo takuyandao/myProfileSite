@@ -43,4 +43,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     new ScrollObserver('.portfolio__item', fn6, { rootMargin: "0px 0px -100px 2px" });
 
+    // footer__inner
+    const fn7 = (el) => {
+        el.classList.add('inview');
+    }
+    new ScrollObserver('.footer__inner', fn7);
+
 });

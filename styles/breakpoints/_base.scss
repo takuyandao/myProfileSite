@@ -38,7 +38,6 @@ body {
 
 .content-width {
     padding: 2rem 2rem;
-    // max-width: 1070px;
 }
 
 .career-cloud {
@@ -79,7 +78,7 @@ body {
     top: 0; left: 0; right: 0;
     padding: 1.3rem 2.5rem;
     z-index: 10;
-    background-color: #1998e4c2;
+    background-color: $cOpaSky;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -219,7 +218,7 @@ body {
             height: 100%;
             background-color: $cSky;
             transform: translateX(-100%);
-            transition: transform 1.5s cubic-bezier(0.48, 1.58, 0.81,-0.6);
+            transition: transform 1.5s linear;
         }
 
         &.inview {
@@ -361,4 +360,44 @@ body {
         @extend .default-text;
         margin-bottom: 2rem;
     }
+}
+
+.footer {
+    padding-top: 3rem;
+
+    &__inner {
+        text-align: center;
+        padding: 1.3rem 0;
+        background-color: $cOpaSky;
+        transform: translateX(-100%);
+        opacity: 0;
+        transition: all 1s;
+
+        &.inview {
+            transform: none;
+            opacity: 1;
+
+            & .footer__name {
+                transform: none;
+                opacity: 1;
+            }
+        }
+    }
+
+    &__credit {
+        color: $cCloud;
+        font-size: 1.3rem;
+        overflow: hidden;
+    }
+
+    &__name {
+        display: inline-block;
+        color: $cSun;
+        font-size: 1.3rem;
+        letter-spacing: 1px;
+        transform: translateX(168%);
+        opacity: 0;
+        transition: all 1s .7s;
+    }
+
 }

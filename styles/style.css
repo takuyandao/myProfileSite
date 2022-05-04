@@ -881,10 +881,10 @@ body {
   background-color: #1fabff;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
-  -webkit-transition: -webkit-transform 1.5s cubic-bezier(0.48, 1.58, 0.81, -0.6);
-  transition: -webkit-transform 1.5s cubic-bezier(0.48, 1.58, 0.81, -0.6);
-  transition: transform 1.5s cubic-bezier(0.48, 1.58, 0.81, -0.6);
-  transition: transform 1.5s cubic-bezier(0.48, 1.58, 0.81, -0.6), -webkit-transform 1.5s cubic-bezier(0.48, 1.58, 0.81, -0.6);
+  -webkit-transition: -webkit-transform 1.5s linear;
+  transition: -webkit-transform 1.5s linear;
+  transition: transform 1.5s linear;
+  transition: transform 1.5s linear, -webkit-transform 1.5s linear;
 }
 
 .about__bar.inview::before {
@@ -1037,6 +1037,51 @@ body {
 
 .portfolio__texts {
   margin-bottom: 2rem;
+}
+
+.footer {
+  padding-top: 3rem;
+}
+
+.footer__inner {
+  text-align: center;
+  padding: 1.3rem 0;
+  background-color: #1998e4c2;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  opacity: 0;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.footer__inner.inview {
+  -webkit-transform: none;
+          transform: none;
+  opacity: 1;
+}
+
+.footer__inner.inview .footer__name {
+  -webkit-transform: none;
+          transform: none;
+  opacity: 1;
+}
+
+.footer__credit {
+  color: #edebe4;
+  font-size: 1.3rem;
+  overflow: hidden;
+}
+
+.footer__name {
+  display: inline-block;
+  color: #ffb300;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  -webkit-transform: translateX(168%);
+          transform: translateX(168%);
+  opacity: 0;
+  -webkit-transition: all 1s .7s;
+  transition: all 1s .7s;
 }
 
 @media (min-width: 600px) {
