@@ -1,52 +1,38 @@
 document.addEventListener('DOMContentLoaded', () => {
+    new Main();
+});
 
-    new ScrollEvent();
-
-    new MobileMenu();
-
-    // hero title
-    const fn = (el) => {
-        const obj = new TextAnimation(el);
-        obj.animate();
-    }
-    new ScrollObserver('.title-up', fn);
-
-    // about h1, career h1, portfolio h1
-    const fn2 = (el) => {
-        const obj2 = new TextAnimation(el);
-        obj2.animate();
+class Main {
+    constructor() { 
+        this._init();
     }
 
-    new ScrollObserver('.title-down', fn2, { rootMargin: "0px 0px -50px 0px" });
+    _init() {
+        new ScrollEvent();
+        new MobileMenu();
+        Pace.on('done', this._paceDone.bind(this));
+    }
 
-    // cloud icon
-    const fn3 = (el) => {
+    _paceDone() {
+        this._scrollInit();
+    }
+    
+    _textAnimation(el) {
+        const ta = new TextAnimation(el);
+        ta.animate();
+    }
+
+    _inviewAnimation(el) {
         el.classList.toggle('inview');
     }
-    new ScrollObserver('.fa-cloud', fn3, { rootMargin: "0px 0px -100px 45px" });
-    
-    // about bar
-    const fn4 = (el) => {
-        el.classList.add('inview');
-    }
-    new ScrollObserver('.about__bar', fn4);
 
-    // portfolio__img
-    const fn5 = (el) => {
-        el.classList.add('inview');
+    _scrollInit() {
+        new ScrollObserver('.title-up', this._textAnimation);
+        new ScrollObserver('.title-down', this._textAnimation, { rootMargin: "0px 0px -50px 0px" });
+        new ScrollObserver('.fa-cloud', this._inviewAnimation, { rootMargin: "0px 0px -100px 45px" });
+        new ScrollObserver('.about__bar', this._inviewAnimation);
+        new ScrollObserver('.portfolio__img', this._inviewAnimation, { rootMargin: "0px 0px -100px 3px" });
+        new ScrollObserver('.portfolio__item', this._inviewAnimation, { rootMargin: "0px 0px -100px 2px" });
+        new ScrollObserver('.footer__inner', this._inviewAnimation);
     }
-    new ScrollObserver('.portfolio__img', fn5, { rootMargin: "0px 0px -100px 3px" });
-
-    // portfolio__item
-    const fn6 = (el) => {
-        el.classList.add('inview');
-    }
-    new ScrollObserver('.portfolio__item', fn6, { rootMargin: "0px 0px -100px 2px" });
-
-    // footer__inner
-    const fn7 = (el) => {
-        el.classList.add('inview');
-    }
-    new ScrollObserver('.footer__inner', fn7);
-
-});
+}

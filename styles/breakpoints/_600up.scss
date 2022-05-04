@@ -16,7 +16,6 @@ html {
 }
 
 .about {
-
     &__ul {
         display: flex;
         justify-content: space-between;
@@ -28,7 +27,7 @@ html {
     }
 }
 
-@keyframes kf-cloud-up { // ???
+@keyframes kf-cloud-up {
 	0% {
 		opacity: 0;
 		transform: translateY(100%);
