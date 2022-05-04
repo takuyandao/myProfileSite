@@ -9,6 +9,19 @@
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+
+   &::-webkit-scrollbar{
+      width: 1rem;
+   }
+
+   &::-webkit-scrollbar-track{
+      background: $cMobileBgColor;
+   }
+
+   &::-webkit-scrollbar-thumb{
+      background: $cScrollBar;
+   }
 }
 
 body {
