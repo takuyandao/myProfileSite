@@ -4,7 +4,7 @@ class MobileMenu {
         this.btn = document.querySelector('.mobile-menu__btn');
         this.container = document.querySelector('#global-container');
         this.cover = document.querySelector('.mobile-menu__cover');
-        this.links = document.querySelectorAll('.mobile-menu__itemnk');
+        this.links = document.querySelectorAll('.mobile-menu__item');
         this.logo = document.querySelector('.mobile-menu__logo');
         this.eventType = this._getEventType();
         this._addEvent();

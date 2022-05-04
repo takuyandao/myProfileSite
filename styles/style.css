@@ -672,7 +672,7 @@ body {
 }
 
 .content-width, .about, .career, .portfolio {
-  padding: 2rem 2rem;
+  padding: 6rem 2rem;
 }
 
 .career-cloud, .career__top-cloud, .career__cloud {
@@ -1039,10 +1039,6 @@ body {
   margin-bottom: 2rem;
 }
 
-.footer {
-  padding-top: 3rem;
-}
-
 .footer__inner {
   text-align: center;
   padding: 1.3rem 0;
@@ -1140,7 +1136,7 @@ body {
     font-size: 125%;
   }
   .content-width, .about, .career, .portfolio {
-    padding: 2rem 9%;
+    padding: 5rem 9%;
   }
   .career-cloud, .career__top-cloud, .career__cloud {
     font-size: 2rem;
