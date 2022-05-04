@@ -37,3 +37,17 @@ html {
 		transform: translateY(-8rem);
 	}
 }
+
+
+.mobile-menu {
+    &__logo {
+        font-size: 2.2rem !important;
+        margin-bottom: 2rem;
+    }
+
+    &__item {
+        & > a {
+            font-size: 1.7rem;
+        }
+    }
+}
